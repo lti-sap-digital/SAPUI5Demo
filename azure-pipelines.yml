@@ -10,7 +10,7 @@ trigger:
 steps:
   - task: Npm@1
     inputs:
-      command: install
+      command: install --no-package-lock
   - task: ArchiveFiles@2
     displayName: 'Archive sources'
     inputs:
