@@ -11,14 +11,6 @@ steps:
   - task: Npm@1
     inputs:
       command: install
-  - script: 'npm test'
-    displayName: 'Run unit tests'
-    continueOnError: true
-  - task: PublishTestResults@2
-    displayName: 'Publish Test Results'
-    condition: succeededOrFailed()
-    inputs:
-      testResultsFiles: $(System.DefaultWorkingDirectory)/test-report.xml
   - task: ArchiveFiles@2
     displayName: 'Archive sources'
     inputs:
