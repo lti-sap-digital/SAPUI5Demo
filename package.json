@@ -8,6 +8,8 @@
     "@sap/ui5-builder-webide-extension": "1.0.9"
   },
   "scripts": {
+    "start": "node ./server.js --production",
+    "local:build": "webpack --env.NODE_ENV=development --mode=development",
     "build": "ui5 build --include-task=generateManifestBundle generateCachebusterInfo"
   },
   "ui5": {
