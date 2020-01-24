@@ -10,7 +10,7 @@ trigger:
 steps:
   - task: Npm@1
     inputs:
-      command: npm install
+      command: install
   - task: ArchiveFiles@2
     displayName: 'Archive sources'
     inputs:
